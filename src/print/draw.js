@@ -11,8 +11,10 @@ function initCanvas(scale = 1)
     canvas.style.height = "100%";
     const resize = () =>
     {
-        canvas.width = Math.floor(canvas.clientWidth * window.devicePixelRatio * scale);
-        canvas.height = Math.floor(canvas.clientHeight * window.devicePixelRatio * scale);
+        // canvas.width = Math.floor(canvas.clientWidth * window.devicePixelRatio * scale);
+        canvas.width = Math.floor(canvas.clientWidth * scale);
+        // canvas.height = Math.floor(canvas.clientHeight * window.devicePixelRatio * scale);
+        canvas.height = Math.floor(canvas.clientHeight * scale);
     };
     resize();
     window.addEventListener("resize", resize);
